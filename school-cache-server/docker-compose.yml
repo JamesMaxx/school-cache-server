@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./resources:/usr/share/nginx/html/resources:ro
+      - ./nginx-logs:/var/log/nginx
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge

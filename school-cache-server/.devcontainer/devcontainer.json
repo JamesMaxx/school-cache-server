@@ -1,0 +1,13 @@
+{
+  "name": "School Cache Server",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "nginx",
+  "workspaceFolder": "/workspace",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/sh"
+  },
+  "extensions": [
+    "ms-azuretools.vscode-docker"
+  ],
+  "postCreateCommand": "echo 'Development container is ready!'"
+}
